@@ -1,0 +1,35 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Product name 1",
+      "price": 111,
+      "description": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+      "quantity": 11,
+      "image": "https://picsum.photos/200/301"
+    },
+    {
+      "id": 2,
+      "name": "Product name 2",
+      "price": 222,
+      "description": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+      "quantity": 22,
+      "image": "https://picsum.photos/200/302"
+    },
+    {
+      "id": 3,
+      "name": "Product name 3",
+      "price": 333,
+      "description": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+      "quantity": 33,
+      "image": "https://picsum.photos/200/303"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "email": "admin@gmail.com",
+      "password": "$2a$12$2IYHgafPbWgs0da0gr2zs.R4ddMeqiKZ9pxW8FC.DU..oLW14tR86"
+    }
+  ]
+}

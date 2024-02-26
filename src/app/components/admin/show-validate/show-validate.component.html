@@ -1,0 +1,71 @@
+<span
+  *ngIf="(field.dirty || field.touched) && field.errors?.['required']"
+  class="text-red-500 text-sm"
+>
+  {{ key }} không được bỏ trống
+</span>
+
+<span
+  *ngIf="(field.dirty || field.touched) && field.errors?.['min']"
+  class="text-red-500 text-sm"
+>
+  {{ key }} không được nhỏ hơn {{field.errors?.["min"].min}}
+</span>
+
+<span
+  *ngIf="(field.dirty || field.touched) && field.errors?.['max']"
+  class="text-red-500 text-sm"
+>
+  {{ key }} không được lớn hơn {{field.errors?.["max"].max}}
+</span>
+
+<span
+  *ngIf="(field.dirty || field.touched) && field.errors?.['minlength']"
+  class="text-red-500 text-sm"
+>
+  {{ key }} không được ít hơn {{field.errors?.["minlength"].requiredLength}} ký
+  tự
+</span>
+
+<span
+  *ngIf="(field.dirty || field.touched) && field.errors?.['maxlength']"
+  class="text-red-500 text-sm"
+>
+  {{ key }} không được nhiều hơn
+  {{field.errors?.["maxlength"].requiredLength}} ký tự
+</span>
+
+<span
+  *ngIf="(field.dirty || field.touched) && field.errors?.['email']"
+  class="text-red-500 text-sm"
+>
+  {{ key }} không đúng định dạng
+</span>
+
+<span
+  *ngIf="(field.dirty || field.touched) && field.errors?.['notFound']"
+  class="text-red-500 text-sm"
+>
+  {{ key }} chưa được đăng ký
+</span>
+
+<span
+  *ngIf="(field.dirty || field.touched) && field.errors?.['incorrectPassword']"
+  class="text-red-500 text-sm"
+>
+  {{ key }} không chính xác
+</span>
+
+<span
+  *ngIf="(field.dirty || field.touched) && field.errors?.['passwordMismatch']"
+  class="text-red-500 text-sm"
+>
+  {{ key }} không trùng khớp
+</span>
+
+<span
+  *ngIf="(field.dirty || field.touched) && field.errors?.['exists']"
+  class="text-red-500 text-sm"
+>
+  {{ key }} đã được đăng ký
+</span>

@@ -1,0 +1,101 @@
+<div class="flex flex-col justify-center items-center m-10">
+  <h1 class="text-3xl font-bold">Thêm sản phẩm</h1>
+  <!-- {{ id ? "Cập nhật" : "Thêm" }} sản phẩm -->
+  <!-- [formGroup]="productForm" (ngSubmit)="onSubmit()" -->
+  <form class="mt-6 w-[60%]">
+    <div class="grid grid-cols-2 gap-10">
+      <div class="">
+        <label htmlFor="">
+          Tên sản phẩm <span class="text-red-500">*</span>
+        </label>
+        <br />
+        <input
+          type="text"
+          class="mt-2"
+          placeholder="Nhập vào tên sản phẩm"
+          formControlName="title"
+        />
+        <!-- <app-show-validate
+          [field]="productForm.get('title')"
+          key="Tên sản phẩm"
+        ></app-show-validate> -->
+      </div>
+
+      <div class="">
+        <label htmlFor="">
+          Giá sản phẩm <span class="text-red-500">*</span>
+        </label>
+        <br />
+        <input
+          type="number"
+          class="mt-2"
+          placeholder="Nhập vào giá sản phẩm"
+          formControlName="price"
+        />
+        <!-- <app-show-validate
+          [field]="productForm.get('price')"
+          key="Giá sản phẩm"
+        ></app-show-validate> -->
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-10 mt-4">
+      <div class="">
+        <label htmlFor=""
+          >Ảnh sản phẩm <span class="text-red-500">*</span></label
+        >
+        <br />
+        <input
+          type="text"
+          class="mt-2"
+          placeholder="Nhập vào url ảnh sản phẩm"
+          formControlName="image"
+        />
+        <!-- <app-show-validate
+          [field]="productForm.get('image')"
+          key="Ảnh sản phẩm"
+        ></app-show-validate> -->
+      </div>
+
+      <div class="">
+        <label htmlFor=""> Số lượng sản phẩm </label>
+        <br />
+        <input
+          type="number"
+          class="mt-2"
+          placeholder="Nhập vào số sản phẩm"
+          formControlName="quantity"
+        />
+        <!-- <app-show-validate
+          [field]="productForm.get('quantity')"
+          key="Số lượng sản phẩm"
+        ></app-show-validate> -->
+      </div>
+    </div>
+
+    <div class="mt-5">
+      <label htmlFor="">Nhập vào mô tả sản phẩm</label>
+      <br />
+      <textarea
+        class="mt-2"
+        name="description"
+        id=""
+        placeholder="Nhập vào mô tả sản phẩm"
+        cols="30"
+        rows="7"
+        formControlName="description"
+      ></textarea>
+      <!-- <app-show-validate
+        [field]="productForm.get('description')"
+        key="Mô tả sản phẩm"
+      ></app-show-validate> -->
+    </div>
+
+    <button
+      class="disabled:cursor-not-allowed disabled:opacity-50 text-center font-bold text-xl bg-slate-500 text-white py-5 w-full mt-4 rounded-xl hover:opacity-80 duration-200"
+    >
+      Thêm sản phẩm
+    </button>
+    <!-- {{ id ? "Cập nhật" : "Thêm" }} sản phẩm -->
+  </form>
+</div>
