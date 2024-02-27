@@ -21,20 +21,40 @@
         ></app-show-validate> -->
       </div>
 
-      <div class="">
+      <!-- <div class="">
         <label htmlFor="">
-          Giá sản phẩm <span class="text-red-500">*</span>
-        </label>
+          Số lượng sản phẩm <span class="text-red-500">*</span></label
+        >
         <br />
         <input
           type="number"
           class="mt-2"
-          placeholder="Nhập vào giá sản phẩm"
-          formControlName="price"
+          placeholder="Nhập vào số sản phẩm"
+          formControlName="quantity"
         />
+        <app-show-validate
+          [field]="productForm.get('quantity')"
+          key="Số lượng sản phẩm"
+        ></app-show-validate>
+      </div> -->
+
+      <div class="">
+        <label htmlFor="">
+          Danh mục sản phẩm <span class="text-red-500">*</span></label
+        >
+        <br />
+        <select formControlName="category" class="mt-2">
+          <option value="">Chọn 1 danh mục</option>
+          <option
+            *ngFor="let category of categories"
+            value="{{ category.name }}"
+          >
+            {{ category.name }}
+          </option>
+        </select>
         <!-- <app-show-validate
-          [field]="productForm.get('price')"
-          key="Giá sản phẩm"
+          [field]="productForm.get('category')"
+          key="Danh mục sản phẩm"
         ></app-show-validate> -->
       </div>
     </div>
@@ -58,17 +78,19 @@
       </div>
 
       <div class="">
-        <label htmlFor=""> Số lượng sản phẩm </label>
+        <label htmlFor="">
+          Giá sản phẩm <span class="text-red-500">*</span>
+        </label>
         <br />
         <input
           type="number"
           class="mt-2"
-          placeholder="Nhập vào số sản phẩm"
-          formControlName="quantity"
+          placeholder="Nhập vào giá sản phẩm"
+          formControlName="price"
         />
         <!-- <app-show-validate
-          [field]="productForm.get('quantity')"
-          key="Số lượng sản phẩm"
+          [field]="productForm.get('price')"
+          key="Giá sản phẩm"
         ></app-show-validate> -->
       </div>
     </div>

@@ -7,10 +7,11 @@
     >
       <tr>
         <th scope="col" class="px-6 py-3">#</th>
-        <th scope="col" class="px-6 py-3">Title</th>
+        <th scope="col" class="px-6 py-3">Name</th>
         <th scope="col" class="px-6 py-3">Image</th>
         <th scope="col" class="px-6 py-3">Description</th>
         <th scope="col" class="px-6 py-3">Category</th>
+        <!-- <th scope="col" class="px-6 py-3">Quantity</th> -->
         <th scope="col" class="px-6 py-3">Price</th>
         <th scope="col" class="px-6 py-3">Action</th>
       </tr>
@@ -22,7 +23,7 @@
       >
         <td class="p-4">{{ index + 1 }}</td>
         <td class="p-4 max-w-[150px] text-black font-bold">
-          {{ product.title }}
+          {{ product.name }}
         </td>
         <td class="p-4">
           <img class="max-w-[100px]" src="{{ product.image }}" />

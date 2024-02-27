@@ -3,11 +3,13 @@ import { CanActivateFn, Router } from '@angular/router';
 
 export const canActivate: CanActivateFn = () => {
   const router = inject(Router);
-  const loggedInUser = localStorage.getItem('loggedInUser');
-  if (loggedInUser) {
+  const loggedInUser = JSON.parse(
+    localStorage.getItem('loggedInUser') as string
+  );
+  if (loggedInUser && loggedInUser.user.id === 1) {
     return true;
   } else {
-    router.navigateByUrl('/auth/login');
+    router.navigateByUrl('/login');
     return false;
   }
 };
